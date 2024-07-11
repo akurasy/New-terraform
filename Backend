@@ -1,0 +1,11 @@
+terraform {
+  backend "s3" {
+    bucket = "witty-eks-s3-bucket"
+    key = "dev/terraform.tfstate"
+    region = "us-west-2"
+    
+    # For state locking
+#    dynamo_table = "eks-dynamo-prod"
+    
+  }
+}
